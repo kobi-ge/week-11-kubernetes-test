@@ -1,0 +1,26 @@
+downloaded streamlit minikube app from github
+minikube start
+minikube status
+
+git checkout -b dockerfile_b
+
+docker image build -t kobigdocker/streamlit_image:v1 .
+docker run -d --name streamlit_cont1 -p 8080:8080  kobigdocker/streamlit_image:v1
+docker push kobigdocker/streamlit_image:v1
+
+git checkout main
+git merge dockerfile_b
+
+git checkout -b service_b
+git checkout main
+git merge service_b
+
+Qubectl apply if pod.yaml
+Qubectl apply if service.yaml
+
+minikube sevice streamlitservice
+
+minikube status
+Qubectl describe pod
+Qubectl get svc
+minikube logs
