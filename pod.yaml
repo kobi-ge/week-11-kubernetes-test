@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: streamlit_pod
+  labels:
+    app: streamlit_pod
+spec:
+  containers:
+  - containerName: streamlit_cont
+    image: kobigdocker/streamlit_image:v1 .
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080
+    
+  
