@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: streamlitcontainer
-    image: kobigdocker/streamlit_image:v1 .
+    image: kobigdocker/streamlit_image:v1
     imagePullPolicy: Always
     ports:
     - containerPort: 8080
